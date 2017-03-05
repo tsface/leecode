@@ -23,8 +23,9 @@ public class AddTwoNumbersTest {
         addTwoNumbers = new AddTwoNumbers();
         ListNode tmpNext = listNode1;
         for(int i=0;i<5;i++){
-            System.out.print(" " +i);
-            tmpNext.next = new ListNode(i);
+            int num = i + new Random().nextInt(20);
+            System.out.print(" " +num);
+            tmpNext.next = new ListNode(num);
             if(i == 0){
                 listNode1.val = tmpNext.next.val;
                 continue;
