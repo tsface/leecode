@@ -29,14 +29,11 @@ public class PalindromeNumber {
 
         boolean isPalindrome = true;
         while (leftIndex >= 0 && rightIndex <= length - 1) {
-            if (chars[leftIndex] != chars[rightIndex]) {
+            if (chars[leftIndex--] != chars[rightIndex++]) {
                 isPalindrome = false;
                 break;
             }
 
-
-            leftIndex--;
-            rightIndex++;
         }
         return isPalindrome;
 
